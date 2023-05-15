@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: 'CRUD ToDo',
   description: 'Laravel + Vue',
+  base: '/tuto-crud-todo/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/mylogo.png',
