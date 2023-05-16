@@ -1,6 +1,6 @@
-# Crear Vistas y Rutas
+# Crear Rutas
 
-Epecemos por crear las correspondientes vistas y rutas para acayar el error de la sección anterior.
+>Epecemos por crear las correspondientes rutas para acayar el error de la sección anterior.
 
 ## Rutas
 
@@ -38,11 +38,17 @@ const router = createRouter({
 export default router
 ```
 
-Tenga en cuenta que implementaremos el mismo componente `CreateOrEdit.vue` tanto para crear tareas como para editarlas y modificarlas.
+>Tenga en cuenta que implementaremos el mismo componente `CreateOrEdit.vue` tanto para **crear** tareas como para **editarlas**.
 
-## Vistas
+Ahora nos aparecerá otro error, no se preocupe.
+ 
+![vue-create-routes](./img/vue-create-routes-1.jpg)
 
-Para que deje de aparecer el error debemos crear los componentes (brevemente vacios) `Index.vue` y `CreateOrEdit.vue` en la carpeta `.\views` respectivamente.
+Este error es porque aún no hemos creado los componentes `Index.vue` y `CreateOrEdit.vue` los cuales representarán nuestras vistas.
+
+## Vistas (temporales)
+
+Para que deje de aparecer el error debemos crear los componentes (brevemente vacios) `Index.vue` y `CreateOrEdit.vue` en la carpeta `.\views` los cuales representarán las vistas respectivamente.
 
 `./views/Index.vue`
 ```vue
@@ -56,3 +62,5 @@ Para que deje de aparecer el error debemos crear los componentes (brevemente vac
 
 <template></template>
 ```
+
+Dichas vistas (o páginas) las construiremos en las siguientes secciones de este tutorial...
