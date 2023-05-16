@@ -18,10 +18,8 @@ hero:
       link: https://ecanquiz.github.io/
 
 features:
-  - title: ¿Qué es un Auxilio Financiero?
-    details: Un auxilio financiero es cuando el gobierno proporciona dinero y/o recursos a una empresa que se puede encontrar en dificultades financieras y necesita ser auxiliado. Estas acciones son para prevenir la quiebra, cierre o el incumplimiento de las obligaciones financieras por parte de la empresa.
-  - title: La Aplicación
-    details: En este sitio encontrará información necesaria para conocer, entender y poner en ejecución el sistema de Auxilio Financiero. También, le será de gran ayuda para hacerle mantenimiento al mismo y escalarlo, de ser necesario.
+  - title: CRUD ToDo ( Laravel + Vue )
+    details: Este tutorial consiste en la creación de un CRUD ToDo (de tareas) con Laravel y Vue bajo una arquitectura orientada a microservicios. Los únicos requisito son conocer los conceptos básicos de Laravel y JS6.
     
-footer: MIT Licensed | Copyleft © 2022-present Ernesto Canquiz
+footer: MIT Licensed | Copyleft © 2023-present Ernesto Canquiz
 ---
