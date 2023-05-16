@@ -1,2 +1,2 @@
-# tuto-crud-todo
-Tuto CRUD ToDo
+# crud-todo
+CRUD ToDo
