@@ -57,7 +57,8 @@ export default defineConfig({
         { text: 'Crear Componente FormTask', link: '/options-api/create-formtask-component' },
         { text: 'Crear Servicios y Tipos', link: '/options-api/create-services-types' },
         { text: 'Refactor Vista Index', link: '/options-api/refactor-index-view' },
-        { text: 'Refactor Vista CreateOrEdit', link: '/options-api/refactor-createoredit-view' },   
+        { text: 'Refactor Vista CreateOrEdit', link: '/options-api/refactor-createoredit-view' },
+        { text: 'Refactor Componente FormTask', link: '/options-api/refactor-formtask-component' }          
       ]
     },{
       text: 'Composition API',

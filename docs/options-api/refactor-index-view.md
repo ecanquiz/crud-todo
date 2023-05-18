@@ -1,6 +1,6 @@
 # Refactorizar Vista `Index.vue`
 
-```vue
+```vue{3,4,9,10,18,19,26,28,29,30,31,33,42,51,52}
 <script lang="ts">
 import { defineComponent } from 'vue'
 import * as Services from '../services/'
@@ -29,19 +29,21 @@ export default defineComponent({
         .finally(() => this.pending = false)
     },
     removeTask(id: string) {
-      this.pending = true
-      Services.removeTask(id)
-        .then(response => {
-          console.log({ statusCode: response.status })
-          if (response.status===204)
-            this.getTasks();
-          })
-        .catch(
-          error => console.log({
-            errorCode: error.code, errorMessage: error.message
-          })
-        )
-        .finally(() => this.pending = false)
+      if (confirm("Do you want to delete this task?")) {
+        this.pending = true
+        Services.removeTask(id)
+          .then(response => {
+            console.log({ statusCode: response.status })
+            if (response.status===204)
+              this.getTasks();
+            })
+          .catch(
+            error => console.log({
+              errorCode: error.code, errorMessage: error.message
+            })
+          )
+          .finally(() => this.pending = false)
+      }
     }
   }
 })
@@ -50,13 +52,12 @@ export default defineComponent({
 <template>
   <div class="container mx-auto">
     <h1 v-if="pending" class="text-2xl" align="center">Loading...</h1>
-    <h1 v-else class="text-2xl" align="center">ToDo List</h1>
-      
+    <h1 v-else class="text-2xl" align="center">ToDo List</h1>      
     <router-link
       :to="{name: 'create'}"
       class="btn btn-primary"
       >Create
-    </router-link>    
+    </router-link>
     <table class="min-w-full text-left text-sm font-light">
       <thead class="border-b font-medium dark:border-neutral-500">
         <tr>
@@ -82,19 +83,18 @@ export default defineComponent({
           <td class="p-2">{{ task.created_at }}</td>
           <td class="p-2">{{ task.updated_at }}</td>          
           <td>
-            <div class="btn-group" role="group">
-              <router-link
-                :to="{name: 'edit', params: { id: task.id }}"
-                class="btn btn-success m-1"
-              >Edit
-              </router-link>
-              <button
-                class="btn btn-danger m-1 text-sm"
-                @click="removeTask(task.id as string)"
-              >
-                Delete
-              </button>
-            </div>
+            <button
+              class="btn btn-success m-1 text-sm"
+              @click="$router.push({name: 'edit', params: {id: task.id}})"
+            >
+              Edit
+            </button>
+            <button
+              class="btn btn-danger m-1 text-sm"
+              @click="removeTask(task.id as unknown as string)"
+            >
+              Delete
+            </button>
           </td>
         </tr>
       </tbody>
