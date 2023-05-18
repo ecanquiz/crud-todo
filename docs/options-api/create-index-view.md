@@ -1,5 +1,7 @@
 # Crear Vista `Index.vue`
 
+Empezaremos con la vista (o página) que renderizará el listado de tareas.
+
 ```vue
 <script lang="ts">
 import { defineComponent } from 'vue'
@@ -75,20 +77,19 @@ export default defineComponent({
           <td class="p-2">{{ task.done }}</td>
           <td class="p-2">{{ task.created_at }}</td>
           <td class="p-2">{{ task.updated_at }}</td>          
-          <td>
-            <div class="btn-group" role="group">
-              <router-link
-                :to="{name: 'edit', params: { id: task.id }}"
-                class="btn btn-success m-1"
-              >Edit
-              </router-link>
-              <button
-                class="btn btn-danger m-1 text-sm"
-                @click="removeTask(task.id)"
-              >
-                Delete
-              </button>
-            </div>
+          <td class="p-2">
+            <button
+              class="btn btn-success m-1 text-sm"
+              @click="$router.push({name: 'edit', params: {id: task.id}})"
+            >
+              Edit
+            </button>
+            <button
+              class="btn btn-danger m-1 text-sm"
+              @click="removeTask(task.id)"
+            >
+              Delete
+            </button>
           </td>
         </tr>
       </tbody>
@@ -97,3 +98,15 @@ export default defineComponent({
   </div>
 </template>
 ```
+
+Con este componente creado ya deberiamos de poder ver el listado de tareas en nuestro navegador. 
+
+>Tenga en cuenta que el backend que funciona como API debe estar trabajando.
+
+Nuestra SPA debería lucir así:
+
+![vue-create-index](./img/vue-create-index-1.jpg)
+
+>Ya esta página esta en la capacidad de mostrar las tareas y eliminarlas.
+
+Continuemos con la vista `CreateOrEdit.vue`

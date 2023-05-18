@@ -10,7 +10,6 @@ Vayamos al archivo de rutas y remplacemos el código con lo siguiente.
 ```ts
 import { createRouter, createWebHistory } from 'vue-router'
 import Index from '../views/Index.vue'
-import CreateOrEdit from '../views/CreateOrEdit.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -52,15 +51,19 @@ Para que deje de aparecer el error debemos crear los componentes (brevemente vac
 
 `./views/Index.vue`
 ```vue
-<script lang="ts"></script>
+<script lang="ts">
+</script>
 
-<template></template>
+<template>
+</template>
 ```
 `./views/CreateOrEdit.vue`
 ```vue
-<script lang="ts"></script>
+<script lang="ts">
+</script>
 
-<template></template>
+<template>
+</template>
 ```
 
 Dichas vistas (o páginas) las construiremos en las siguientes secciones de este tutorial...
