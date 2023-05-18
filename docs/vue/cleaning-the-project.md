@@ -10,7 +10,8 @@ Inmediatamente aparecerá un error en la pantalla como el siguiente:
 
 No se preocupe. Vayamos al archivo `./App.vue` y comentemos las siguientes líneas resaltadas.
 
-```vue{3,11}
+`./App.vue`
+```vue{3,11,13,14,15,16}
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 //import HelloWorld from './components/HelloWorld.vue'
@@ -23,10 +24,10 @@ import { RouterLink, RouterView } from 'vue-router'
     <div class="wrapper">
       <!--HelloWorld msg="You did it!" /-->
 
-      <nav>
+      <!--nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
-      </nav>
+      </nav-->
     </div>
   </header>
 
@@ -34,7 +35,9 @@ import { RouterLink, RouterView } from 'vue-router'
 </template>
 ```
 
-Todavía falta comentar algo en otro archivo.
+Todavía falta comentar algo en otro archivo. Se trata de la vista `HomeView.vue`.
+
+`./views/HomeView.vue`
 
 ```vue{2,7}
 <script setup lang="ts">
@@ -60,4 +63,4 @@ Aparecerá otro error...
 
 Pero este error lo trataremos en la siguiente sección.
 
->Es todo lo que tenemos por limpiar.
+>Por ahora, es todo lo que tenemos por limpiar.

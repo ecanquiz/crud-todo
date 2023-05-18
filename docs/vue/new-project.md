@@ -5,6 +5,17 @@
 ```sh
 npm init vue@latest
 ```
+
+Lo primero que nos preguntará el CLI es establecer el nombre del proyecto, siéntase libre de colocar el nombre del proyecto de su preferencia.
+
+```sh
+? Project name: › vue-project
+```
+
+En mi caso, colocaré el nombre del proyecto: `crud-todo-vue`. Inmediatamente el CLI nos hará una serie de preguntas que definirán las características generales del proyecto. 
+
+:::info Nota
+Para cumplir con el objetivo de este tutorial, seleccione solo las opciones que aparecen resaltadas en el siguiente código:
 ```sh{1,2,4}
 ✔ Project name: … crud-todo-vue
 ✔ Add TypeScript? … Yes
@@ -14,14 +25,26 @@ npm init vue@latest
 ✔ Add Vitest for Unit Testing? … No
 ✔ Add an End-to-End Testing Solution? › No
 ✔ Add ESLint for code quality? … No
-  cd todo-spa
-  npm install
-  npm run dev
+```
+:::
+
+Perfecto, ya nuestro andamiaje ha sido creado:
+
+```sh
+Scaffolding project in /home/ecanquiz/crud-todo-vue...
+
+Done. Now run:
+```
+## Hecho. Ahora ejecuta:
+
+Para finalizar la instalación de Vue, siga las instrucciones, paso por paso, ejecutando lo siguiente:
+```sh
+cd todo-spa
+npm install
+npm run dev
 ```
 
-## Corriendo la SPA
-
-Después de ejecutar `cd todo-spa`, `npm install` y `npm run dev`, en la terminal verá lo siguiente.
+Con la instrucción `cd todo-spa` entramremos en la carpeta del proyecto que acabamos de crear. Luego ejecutamos `npm install` para instalar las dependencias de Vue y después levantamos nuestro proyecto con `npm run dev` en modo desarrollo. En la terminal verá lo siguiente.
 
 ```sh
   VITE v4.3.5  ready in 419 ms
@@ -129,7 +152,11 @@ select {
 
 ## Instalando Axios
 
+Para finalizar las instalaciones de dependencias ejecute lo siguiente.
+
 ```sh
 npm i axios
 ```
+
+Con este paquete haremos las solicitudes HTTPRequest a el backend (API) para acceder a los datos (tareas).
 
