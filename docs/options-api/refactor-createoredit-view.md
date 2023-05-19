@@ -1,6 +1,10 @@
 # Refactorizar Vista `CreateOrEdit.vue`
 
-```vue
+>En esta sección aplicaremos exactamente lo mismo que en la [sección anterior](../options-api/refactor-index-view.html), es decir, consumir e implementar [nuestro servicio y tipado](../options-api/create-services-types.html).
+
+En el siguiente código resaltado notará los cambios que hicimos para mejorar nuestro código.
+
+```vue{3,5,16,17,32,33,40,42,43,45,47,51,53,55,59,68,69,70,71}
 <script lang="ts">
 import { defineComponent } from 'vue'
 import * as Services from '../services/'
@@ -16,7 +20,7 @@ export default defineComponent({
   },
   data() {
     return {
-      task: {},
+      task: {} as Task,
       pending: false
     }
   },
@@ -77,3 +81,6 @@ export default defineComponent({
 </template>
 ```
 
+---
+
+>Ahora, solo nos toca mejorar el componente `FormTask.vue`, sigamos avanzando...

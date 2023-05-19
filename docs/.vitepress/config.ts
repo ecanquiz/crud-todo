@@ -65,7 +65,10 @@ export default defineConfig({
       path: '/composition-api/',
       collapsible: true,
       collapsed: true,      
-      items: [          
+      items: [
+        { text: 'Migrar Vista Index', link: '/composition-api/migrate-index-view' },
+        { text: 'Migrar Vista CreateOrEdit', link: '/composition-api/migrate-createoredit-view' },
+        { text: 'Migrar Componente FormTask', link: '/composition-api/migrate-formtask-component' },          
       ]
     }, {
       text: 'Script SetUp',
