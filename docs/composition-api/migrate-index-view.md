@@ -1,53 +1,51 @@
-# Refactorizar Vista `Index.vue`
+# Migrar Vista `Index.vue`
 
->Como habrá notado cuando [creamos la vista Index.vue](../options-api/create-index-view.html), hay mucho código que huele mal. Es decir, partes de código que se repite y que no ayudan a la escalabilidad y testeo del mismo. Además que TypeScript tampoco está muy de acuerdo con el tipado. Así que vamos a empezar a consumir e implementar [el servicio y el tipado construido en la sección anterior](../options-api/create-services-types.html).
-
-En el siguiente código resaltado notará que se reflejan los cambios que hicimos para mejorar nuestro código.
-
-```vue{3,4,9,10,18,19,26,28,29,30,31,33,42,51,52}
+```vue
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, ref, onMounted } from 'vue'
 import * as Services from '../services/'
+import type {Ref} from 'vue'
 import type { Task } from '@/types'
 
 export default defineComponent({
-  data() {
-    return {
-      tasks: [] as Task[],
-      pending: false
-    }
-  },
-  mounted() {
-    this.getTasks();
-  },
-  methods: {
-    getTasks() {
-      this.pending = true
+  setup() {
+    const tasks: Ref<Task[]> = ref([])
+    const pending = ref(false)
+    const getTasks = () => {
+      pending.value = true
       Services.getTasks()
-        .then(response => this.tasks = response.data )
+        .then(response => tasks.value = response.data )
         .catch(
           error => console.log({
             errorCode: error.code, errorMessage: error.message
           })
         )
-        .finally(() => this.pending = false)
-    },
-    removeTask(id: string) {
+        .finally(() => pending.value = false)
+    }
+    const removeTask = (id: string) => {
       if (confirm("Do you want to delete this task?")) {
-        this.pending = true
+        pending.value = true
         Services.removeTask(id)
           .then(response => {
             console.log({ statusCode: response.status })
             if (response.status===204)
-              this.getTasks();
+              getTasks();
             })
           .catch(
             error => console.log({
               errorCode: error.code, errorMessage: error.message
             })
           )
-          .finally(() => this.pending = false)
+          .finally(() => pending.value = false)
       }
+    }
+
+    onMounted(() => getTasks())
+
+    return {
+      pending,
+      tasks,
+      removeTask
     }
   }
 })
@@ -56,7 +54,8 @@ export default defineComponent({
 <template>
   <div class="container mx-auto">
     <h1 v-if="pending" class="text-2xl" align="center">Loading...</h1>
-    <h1 v-else class="text-2xl" align="center">ToDo List</h1>      
+    <h1 v-else class="text-2xl" align="center">ToDo List</h1>
+      
     <router-link
       :to="{name: 'create'}"
       class="btn btn-primary"
@@ -107,7 +106,3 @@ export default defineComponent({
   </div>
 </template>
 ```
-
-Además de lo antes dicho, habrá notado que tanbién sacamos provecho a lo anterior para agregar un poquito más de funcionalidad al mismo.
-
->Ahora nos toca mejorar `CreateOrEdit.vue`, así que avancemos...
