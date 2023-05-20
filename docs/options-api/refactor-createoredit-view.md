@@ -49,7 +49,7 @@ export default defineComponent({
     submit(payload: Task) {
       this.pending = true
       if (this.$props.id===undefined) {
-        Services.insertUser(payload)
+        Services.insertTask(payload)
           .then(response => {
             alert(response.data.message)
             this.$router.push({name: 'index'})
@@ -57,7 +57,7 @@ export default defineComponent({
           .catch(error => console.log(error))
           .finally(() => this.pending = false)
       } else {      
-        Services.updateUser(this.$props.id, payload)
+        Services.updateTask(this.$props.id, payload)
           .then(response => {
             alert(response.data.message)
             this.$router.push({name: 'index'})
