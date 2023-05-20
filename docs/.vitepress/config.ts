@@ -68,13 +68,16 @@ export default defineConfig({
       items: [
         { text: 'Migrar Vista Index', link: '/composition-api/migrate-index-view' },
         { text: 'Migrar Vista CreateOrEdit', link: '/composition-api/migrate-createoredit-view' },
-        { text: 'Migrar Componente FormTask', link: '/composition-api/migrate-formtask-component' },          
+        { text: 'Migrar Componente FormTask', link: '/composition-api/migrate-formtask-component' },
+        { text: 'Crear Composable useIndex', link: '/composition-api/create-composable-useindx' },
+        { text: 'Composable useCreateOrEdit', link: '/composition-api/create-composable-usecreateoredit' },
+        { text: 'Composable useFormTask', link: '/composition-api/create-composable-useformtask' }
       ]
     }, {
       text: 'Script SetUp',
       path: '/script-setup/',
       collapsible: true,
-      collapsed: true,      
+      collapsed: true,
       items: [          
       ]
     }],    
