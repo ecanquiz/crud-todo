@@ -23,11 +23,11 @@ export const getTask = async <T>(taskId: T) => {
   return await instance.get(`/tasks/${taskId}`);
 }
 
-export const insertUser = async <T>(payload: T) => {
+export const insertTask = async <T>(payload: T) => {
   return await instance.post(`/tasks`, payload);
 }
   
-export const updateUser = async <T,U>(taskId: T, payload: U) => {
+export const updateTask = async <T,U>(taskId: T, payload: U) => {
   return instance.put(`/tasks/${taskId}`, payload);
 }
 

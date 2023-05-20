@@ -42,7 +42,7 @@ export default defineComponent({
     const submit = (payload: Task) => {
       pending.value = true
       if (props.id===undefined) {
-        Services.insertUser(payload)
+        Services.insertTask(payload)
           .then(response => {
             alert(response.data.message)
             router.push({name: 'index'})
@@ -50,7 +50,7 @@ export default defineComponent({
           .catch(error => console.log(error))
           .finally(() => pending.value = false)
       } else {      
-        Services.updateUser(props.id, payload)
+        Services.updateTask(props.id, payload)
           .then(response => {
             alert(response.data.message)
             router.push({name: 'index'})
