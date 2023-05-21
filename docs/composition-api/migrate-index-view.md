@@ -1,6 +1,46 @@
 # Migrar Vista `Index.vue`
 
+## Introducción a `setup()`
+
+>El gancho [`setup()`](https://vuejs.org/api/composition-api-setup.html#composition-api-setup) sirve como punto de entrada para el uso de la Composition API en componentes. Puede acceder a los valores expuestos de la Composition API desde la Options API, pero no al revés.
+
 ```vue
+<script>
+import { defineComponent } from 'vue'
+// respective imports
+
+export default defineComponent({
+  props: { /* respective properties */  },
+  components: { /* respective components */ },
+  mounted() { /* respective code */ },
+  setup() { 
+    // respective code
+    
+    return {
+      // respective return
+    }
+  }
+})
+</script>
+
+<template>
+  <!-- respective ui -->
+</template>
+```
+
+## Migrando a la Composition API
+
+>Empezaremos migrando a la Composition API el archivo `./views/Index.vue`.
+
+Tenga en cuenta que para manejar el estado del componente ya no utilizaremos la opción `data` sino el método integrado de Vue llamado `ref`. Igualmente sucederá con la opción `mounted`, para este caso importaremos `onMounted`.
+
+Para asignar valores a las constantes reactivas declaradas con `ref` se harán a través de la propiedad `.value`. Note que aquí no se usa el prefijo `this.`
+
+Para declarar los correspondientes métodos lo haremos como normalmente lo hacemos en JS6+TS. Es decir, declarando una constante a la cual le asignamos una función.
+
+Por último, siempre se deberá retornar las propiedades y métodos que deberán ser expuestos en el `template`.
+
+```vue{2,8,9,10,11,12,14,20,22,24,36,40,43,44,45}
 <script lang="ts">
 import { defineComponent, ref, onMounted } from 'vue'
 import * as Services from '../services/'
@@ -106,3 +146,5 @@ export default defineComponent({
   </div>
 </template>
 ```
+
+>Tenga en cuenta que dicho `template` no sufre ninguna modificación.
