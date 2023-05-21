@@ -1,6 +1,10 @@
 # Migrar Componente `FormTask.vue`
 
-```vue
+>Llegado a este punto ya deberíamos estar algo familiarizados con la Composition API y el gancho `setup()`.
+
+Para el componente `FormTask.vue`, tenga en cuenta que, además de recibir el objeto `props`, también emite un evento. Dicho [evento `emit` deberá ser pasado al gancho `setup()` a través del contexto](https://vuejs.org/api/composition-api-setup.html#setup-context).
+
+```vue{9,10,12}
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
 import type { Task } from '@/types'
@@ -45,3 +49,4 @@ export default defineComponent({
   </form>
 </template>
 ```
+>Tenga en cuenta que el `template` no sufre ninguna modificación.

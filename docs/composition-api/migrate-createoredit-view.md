@@ -1,6 +1,18 @@
 # Migrar Vista `CreateOrEdit.vue`
 
-```vue
+>Tomando en cuenta las consideraciones sobre el gancho `setup` de la Composition API descritas en la [sección anterior](../composition-api/migrate-index-view.html), avancemos entonces con el archivo `./views/CreateOrEdit.vue`.
+
+## `./views/CreateOrEdit.vue`
+
+Tenga en cuenta que las `props` y `components` hijos, se declaran en la Composition API igual que lo venimos haciendo en la Options API. De hecho, recuerde que el gancho `setup` es una opción más de la misma.
+
+Una diferencia entre la Options API y la Composition API es que el [`router`](https://router.vuejs.org/guide/advanced/composition-api.html) es instanciado como un composable.
+
+La diferencia de la [`./views/Index.vue`](../composition-api/migrate-index-view.html) con respecto a la `./views/CreateOrEdit.vue`, es que en esta debemos pasar como argumento [las `props` al gancho `setup()`](https://vuejs.org/api/composition-api-setup.html#accessing-props).
+
+Note que aquí también necesitamos importar el método [`computed`](https://vuejs.org/guide/essentials/computed.html) de nuestro framework Vue, así como lo hicimos previamente en [la sección anterior](../composition-api/migrate-index-view.html) con [`onMounted`](https://vuejs.org/api/composition-api-lifecycle.html#onmounted).
+
+```vue{2,3,9,10,11,12,13,14,15,16,20,21,22,23}
 <script lang="ts">
 import { computed, defineComponent, ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
@@ -17,9 +29,7 @@ export default defineComponent({
   },
   setup(props) {
     const router = useRouter()
-
     const task = ref({} as Task)
-
     const pending = ref(false)
 
     const isRenderable = computed(
@@ -86,4 +96,6 @@ export default defineComponent({
   </div>
 </template>
 ```
+
+>Tenga en cuenta que el `template` no sufre ninguna modificación.
 
