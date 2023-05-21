@@ -71,8 +71,7 @@ export default () => {
   return {
     pending,
     tasks,
-    
-    getTasks,
+
     removeTask
   }
 }
@@ -84,7 +83,7 @@ Solo nos queda importar el composable `useIndex` e instanciarlo para poder imple
 
 
 `./views/Index.vue`
-```vue{3,7,8,9,10,11,12,13}
+```vue{3,7,8,9,10,11,12}
 <script lang="ts">
 import { defineComponent } from 'vue'
 import useIndex from '../composables/useIndex'
@@ -94,13 +93,13 @@ export default defineComponent({
     const {
       pending,
       tasks,
-    
-      getTasks,
+
       removeTask
     } = useIndex()
 
     return {
       pending,
+
       tasks,
       removeTask
     }
