@@ -47,8 +47,7 @@ import{_ as s,c as n,o as a,O as l}from"./chunks/framework.13642e85.js";const A=
 <span class="line"><span style="color:#F07178;">  </span><span style="color:#89DDFF;font-style:italic;">return</span><span style="color:#F07178;"> </span><span style="color:#89DDFF;">{</span></span>
 <span class="line"><span style="color:#F07178;">    </span><span style="color:#A6ACCD;">pending</span><span style="color:#89DDFF;">,</span></span>
 <span class="line"><span style="color:#F07178;">    </span><span style="color:#A6ACCD;">tasks</span><span style="color:#89DDFF;">,</span></span>
-<span class="line"><span style="color:#F07178;">    </span></span>
-<span class="line"><span style="color:#F07178;">    </span><span style="color:#A6ACCD;">getTasks</span><span style="color:#89DDFF;">,</span></span>
+<span class="line"></span>
 <span class="line"><span style="color:#F07178;">    </span><span style="color:#A6ACCD;">removeTask</span></span>
 <span class="line"><span style="color:#F07178;">  </span><span style="color:#89DDFF;">}</span></span>
 <span class="line"><span style="color:#89DDFF;">}</span></span></code></pre></div><h2 id="limpiando-el-archivo-views-index-vue" tabindex="-1">Limpiando el archivo <code>./views/Index.vue</code> <a class="header-anchor" href="#limpiando-el-archivo-views-index-vue" aria-label="Permalink to &quot;Limpiando el archivo \`./views/Index.vue\`&quot;">​</a></h2><p>Solo nos queda importar el composable <code>useIndex</code> e instanciarlo para poder implementar las propiedades y funciones de retorno.</p><p><code>./views/Index.vue</code></p><div class="language-vue"><button title="Copy Code" class="copy"></button><span class="lang">vue</span><pre class="shiki material-theme-palenight has-highlighted-lines"><code><span class="line"><span style="color:#89DDFF;">&lt;</span><span style="color:#F07178;">script</span><span style="color:#A6ACCD;"> </span><span style="color:#C792EA;">lang</span><span style="color:#89DDFF;">=</span><span style="color:#89DDFF;">&quot;</span><span style="color:#C3E88D;">ts</span><span style="color:#89DDFF;">&quot;</span><span style="color:#89DDFF;">&gt;</span></span>
@@ -60,13 +59,13 @@ import{_ as s,c as n,o as a,O as l}from"./chunks/framework.13642e85.js";const A=
 <span class="line highlighted"><span style="color:#F07178;">    </span><span style="color:#C792EA;">const</span><span style="color:#F07178;"> </span><span style="color:#89DDFF;">{</span></span>
 <span class="line highlighted"><span style="color:#F07178;">      </span><span style="color:#A6ACCD;">pending</span><span style="color:#89DDFF;">,</span></span>
 <span class="line highlighted"><span style="color:#F07178;">      </span><span style="color:#A6ACCD;">tasks</span><span style="color:#89DDFF;">,</span></span>
-<span class="line highlighted"><span style="color:#F07178;">    </span></span>
-<span class="line highlighted"><span style="color:#F07178;">      </span><span style="color:#A6ACCD;">getTasks</span><span style="color:#89DDFF;">,</span></span>
+<span class="line highlighted"><wbr></span>
 <span class="line highlighted"><span style="color:#F07178;">      </span><span style="color:#A6ACCD;">removeTask</span></span>
 <span class="line highlighted"><span style="color:#F07178;">    </span><span style="color:#89DDFF;">}</span><span style="color:#F07178;"> </span><span style="color:#89DDFF;">=</span><span style="color:#F07178;"> </span><span style="color:#82AAFF;">useIndex</span><span style="color:#F07178;">()</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#F07178;">    </span><span style="color:#89DDFF;font-style:italic;">return</span><span style="color:#F07178;"> </span><span style="color:#89DDFF;">{</span></span>
 <span class="line"><span style="color:#F07178;">      </span><span style="color:#A6ACCD;">pending</span><span style="color:#89DDFF;">,</span></span>
+<span class="line"></span>
 <span class="line"><span style="color:#F07178;">      </span><span style="color:#A6ACCD;">tasks</span><span style="color:#89DDFF;">,</span></span>
 <span class="line"><span style="color:#F07178;">      </span><span style="color:#A6ACCD;">removeTask</span></span>
 <span class="line"><span style="color:#F07178;">    </span><span style="color:#89DDFF;">}</span></span>
