@@ -78,7 +78,10 @@ export default defineConfig({
       path: '/script-setup/',
       collapsible: true,
       collapsed: true,
-      items: [          
+      items: [
+        { text: 'Migrar Vista Index', link: '/script-setup/migrate-index-view' },
+        { text: 'Migrar Vista CreateOrEdit', link: '/script-setup/migrate-createoredit-view' },
+        { text: 'Migrar Componente FormTask', link: '/script-setup/migrate-formtask-component' },        
       ]
     }],    
     socialLinks: [
