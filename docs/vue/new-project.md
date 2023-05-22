@@ -66,8 +66,9 @@ npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 ```
 
-A continuación, agregue las rutas a todos sus archivos de plantilla en su archivo `tailwind.config.js`.
+A continuación, agregue las rutas a todos sus archivos de plantilla en el archivo `tailwind.config.js` ubicado en la raiz del proyecto.
 
+📃`tailwind.config.js`
 ```js{4,5}
 /** @type {import('tailwindcss').Config} */ 
 module.exports = {
@@ -84,6 +85,7 @@ module.exports = {
 
 Ahora cree un archivo `./src/assets/app.css` y agregue las directivas `@tailwind` para cada una de las capas de Tailwind.
 
+📃`./src/assets/app.css`
 ```css
 @tailwind base;
 @tailwind components;
@@ -92,6 +94,7 @@ Ahora cree un archivo `./src/assets/app.css` y agregue las directivas `@tailwind
 
 Importe el archivo `./src/index.css` recién creado en su archivo `./src/main.ts`.
 
+📃`./src/main.ts`
 ```ts
 // import './assets/main.css'
 import './assets/app.css'
@@ -118,6 +121,7 @@ Excelente, ya hemos instalado TailwindCss !!
 
 Para que las plantillas de los SFC que construiremos queden un poco más limpias, cópie y peque el código resaltado en su archivo `./src/assets/app.css`.
 
+📃`./src/assets/app.css`
 ```css{5,6,7,8,9,10,11,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29}
 @tailwind base;
 @tailwind components;

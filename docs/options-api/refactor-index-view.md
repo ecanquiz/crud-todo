@@ -4,6 +4,7 @@
 
 En el siguiente código resaltado notará que se reflejan los cambios que hicimos para mejorar nuestro código.
 
+📃`./views/Index.vue`
 ```vue{3,4,9,10,18,19,26,28,29,30,31,33,42,51,52}
 <script lang="ts">
 import { defineComponent } from 'vue'

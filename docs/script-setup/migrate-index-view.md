@@ -2,9 +2,18 @@
 
 ## Introducción a `script-setup`
 
+>[`<script setup>`](https://vuejs.org/api/sfc-script-setup.html) es un azúcar sintáctico en tiempo de compilación para usar la Composition API dentro de los [Single-File Components (SFCs)](https://vuejs.org/guide/scaling-up/sfc.html). Es la sintaxis recomendada si está utilizando tanto SFC como Composition API. Proporciona una serie de ventajas sobre la sintaxis normal de `<script>`.
+>- Código más sucinto con menos _boilerplate_
+>- Capacidad para declarar propiedades y eventos emitidos usando TypeScript puro.
+>- Mejor rendimiento en tiempo de ejecución (la plantilla se compila en una función de representación en el mismo ámbito, sin un proxy intermedio)
+>- Mejor rendimiento de inferencia de tipo IDE (menos trabajo para que el servidor de idioma extraiga tipos del código)
+
 ## Migrando a `script-setup`
 
-```vue
+Con `script-setup` no tenemos que exportar (por defecto) ningún objeto, mucho menos utilizar la función `defineComponent({})` de Vue para TypeScript, ni retornar valores o funciones para sean expuestas en la plantilla.
+
+📃`./views/Index.vue`
+```vue{1,2,3,4,5,6,7,8,9,10}
 <script setup lang="ts">
 import useIndex from '../composables/useIndex'
 
@@ -71,3 +80,5 @@ const {
   </div>
 </template>
 ```
+
+Simplemente, pruébalo.

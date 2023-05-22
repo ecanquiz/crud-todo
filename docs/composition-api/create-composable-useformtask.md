@@ -1,8 +1,19 @@
 # Crear Composable `useFormTask.ts`
 
+>Después de haber visto las dos secciones anteriores ya deberíamos de estar un poco familiarizado con los composables.
+
+Ya creamos un [composable que no recibe argumentos](../composition-api/create-composable-useindx.html) y otro que [recibe las `props` como primer argumento](../composition-api/create-composable-usecreateoredit.html). No obstante, aún nos falta un escenario donde tengamos que [pasar también el contexto](https://vuejs.org/api/composition-api-setup.html#setup-context) o parte de él.
+
 ## Creando el archivo `./composables/useFormTask.ts`
 
-```ts
+:::info Nota
+No se preocupe si aún no se encuentra muy familiarizado con [TypeScript](https://www.typescriptlang.org/), porque gracias a los complementos de vscode ([Vue Language Features "Volar"](https://marketplace.visualstudio.com/items?itemName=Vue.volar) y [TypeScript Vue Plugin "Volar"](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin)) estos nos ayuda con el soporte.
+:::
+
+Tenga en cuenta que aquí estaremos pasando tanto las [propiedades](https://vuejs.org/api/composition-api-setup.html#accessing-props) como el [contexto](https://vuejs.org/api/composition-api-setup.html#setup-context). En este caso, los eventos `ctx.emit`.
+
+📃`./composables/useFormTask.ts`
+```ts{9,12,14}
 import { ref } from 'vue'
 import type { Task } from '@/types'
 
@@ -25,9 +36,17 @@ export default (props: Props, ctx: Ctx) => {
   }
 }
 ```
+
+>Gracias a TypeScript, este tipado sirve tanto para el verificado de tipos como para tener alguna documentación referente a lo que recibe la función.
+
 ## Limpiando el archivo `./components/FormTask.vue`
 
-```vue
+Solo nos queda importar el composable `useFormTask` e instanciarlo para poder implementar sus propiedades y funciones de retorno.
+
+Tenga en cuenta que las `props` y el `ctx` deben ser pasadas respectivamente como argumento a la función `setup()`, ya que las necesitamos para pasarlas al composable `useFormTask`.
+
+📃`./components/FormTask.vue`
+```vue{3,10,15}
 <script lang="ts">
 import { defineComponent } from 'vue'
 import useFormTask from '../composables/useFormTask'
@@ -76,5 +95,4 @@ export default defineComponent({
   </form>
 </template>
 ```
-
-
+De esta forma todo queda mucho más limpio, reutilizable y testeable.

@@ -1,37 +1,46 @@
-## Pruebas con Postman
+# Pruebas con Postman
 
-Devolverá todas las tareas.
+En este punto del tutorial, deberíamos poder hacer pruebas a la API (backend) de Laravel con alguna herramienta como [Postman](https://www.postman.com/).
 
+Pero, primero asegurémonos que dicha API está [levantada](https://laravel.com/docs/10.x/installation#your-first-laravel-project) y [configurada](https://laravel.com/docs/10.x/database#configuration).
+
+:::info EndPoints
+A continuación, los puntos finales disponibles como recursos de nuestra API.
+:::
+
+## Devover todas las tareas
 ```sh
-# get
+# get method
 http://127.0.0.1:8000/api/tasks
 ```
-Devuelve una tarea.
+
+## Devover una tarea
 ```sh
-# get
+# get method
 http://127.0.0.1:8000/api/tasks/1
 ```
 
-Crea una nueva tarea.
+## Crear una nueva tarea
 ```sh
-# post
+# post method
 http://127.0.0.1:8000/api/tasks
 ```
-Actualiza una tarea.
+
+## Actualizar una tarea existente
 ```sh
-#put
+# put method
 http://127.0.0.1:8000/api/tasks/4
 ```
 
-Elimina una tarea
+## Elimina una tarea existente
 ```sh
-#delete
+# delete method
 http://127.0.0.1:8000/api/tasks/4
 ```
 
-## Algunas instrucciones útiles que pueden ayudar
+## Instrucciones útiles
 
-Aquí algunas instrucciones útiles para ejecutar cuando algo anda mal.
+Aquí algunas instrucciones útiles que pueden ayudar cuando algo anda mal.
 
 ```sh
 composer dump-autoload
@@ -43,3 +52,9 @@ php artisan config:cache
 php artisan optimize
 php artisan storage:link
 ```
+
+---
+
+>Llegado a este punto, el resto del trabajo por hacer queda del lado de la SPA (frontend) con Vue. Avancemos...
+
+

@@ -2,6 +2,7 @@
 
 Empezaremos con la vista (o página) que renderizará el listado de tareas.
 
+📃`./views/Index.vue`
 ```vue
 <script lang="ts">
 import { defineComponent } from 'vue'

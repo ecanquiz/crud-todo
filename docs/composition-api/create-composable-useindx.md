@@ -10,7 +10,7 @@ Primero creemos la carpeta `.composables/` en el archivo raiz.
 
 Luego, para tener una idea general de como se ve un composable, comencemos creando, dentro de la respectiva carpeta, un archivo llamado `useIndex.ts`.
 
-`./composables/useIndex.ts`
+📃`./composables/useIndex.ts`
 ```ts
 export default () => {
  
@@ -26,6 +26,7 @@ Tenga en cuenta que en este caso se trata de una simple función exportada por d
 
 Simplemente cortemos y peguemos el código que representa la lógica de negocio que tenemos en la vista [`./views/Index.vue`](../composition-api/migrate-index-view.html)
 
+📃`./composables/useIndex.ts`
 ```ts
 import { ref, onMounted } from 'vue'
 import * as Services from '../services/'
@@ -81,8 +82,7 @@ export default () => {
 
 Solo nos queda importar el composable `useIndex` e instanciarlo para poder implementar las propiedades y funciones de retorno.
 
-
-`./views/Index.vue`
+📃`./views/Index.vue`
 ```vue{3,7,8,9,10,11,12}
 <script lang="ts">
 import { defineComponent } from 'vue'

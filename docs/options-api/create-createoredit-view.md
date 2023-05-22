@@ -1,10 +1,10 @@
 # Crear Vista `CreateOrEdit.vue`
 
-Esta vista funcionará tanto para crear tareas como para editarlas.
+>Esta vista funcionará tanto para crear tareas como para editarlas.
 
 Cópie y pegue el siguiente código en la vista respectiva.
 
-`./views/CreateOrEdit.vue`
+📃`./views/CreateOrEdit.vue`
 ```vue{8,19,24,25,31,40,50,65}
 <script lang="ts">
 import { defineComponent } from 'vue'
@@ -90,7 +90,7 @@ Y es que esta vista tiene un componente hijo que no hemos creado aún.
 
 Para que deje de aparecer en pantalla el error anterior debemos crear el componente (brevemente vacio) `FormTask.vue` en la carpeta `./componentes/`.
 
-`./componentes/FormTask.vue`
+📃`./componentes/FormTask.vue`
 ```vue
 <script lang="ts">
 </script>
