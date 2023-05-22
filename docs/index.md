@@ -22,13 +22,13 @@ features:
     details: Este tutorial consiste en la creación de un CRUD ToDo, con Laravel y Vue, bajo una arquitectura orientada a microservicios. 
     
   - title: Objetivo del Tutorial
-    details: El objetivo del tutorial es tener una visión clara en Vue, de la Options API, la Composition API y script-setup.
+    details: El objetivo del tutorial es tener una visión clara de Vue respecto a la Options API, la Composition API y script-setup.
 
   - title: ¿ A quiénes está dirigido ?
     details: Está dirigido a los desarrolladores que desean escalar respectivamente desde la Options API hacia la Compositions API, composables y script-setup.
 
   - title: Requisitos
-    details: Los únicos requisito son conocer los conceptos básicos de Laravel y de Vue.
+    details: Los únicos requisito son conocer los conceptos básicos de Laravel y Vue.
     
 footer: MIT Licensed | Copyleft © 2023-present Ernesto Canquiz
 ---
