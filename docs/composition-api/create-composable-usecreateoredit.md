@@ -4,7 +4,7 @@
 
 ## Creando el archivo `./composables/useCreateOrEdit.ts`
 
-Simplemente cortemos y peguemos el código que representa la lógica de negocio que tenemos en la vista [./views/CreateOrEdit.vue](composition-api/migrate-createoredit-view.html).
+Simplemente cortemos y peguemos el código que representa la lógica de negocio que tenemos en la vista [./views/CreateOrEdit.vue](../composition-api/migrate-createoredit-view.html).
 
 📃`./composables/useCreateOrEdit.ts`
 ```ts{6,12,13,18,30,39,50}
