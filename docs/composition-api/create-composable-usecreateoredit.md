@@ -1,8 +1,13 @@
 # Crear Composable `useCreateOrEdit.ts`
 
+>En esta sección aplicaremos la misma técnica que utilizamos en la [sección anterior](../composition-api/create-composable-useindx.html). Es decir, separar la lógica de negocio de la UI, gracias a los [composables](https://vuejs.org/guide/reusability/composables.html) de Vue.
+
 ## Creando el archivo `./composables/useCreateOrEdit.ts`
 
-```ts
+Simplemente cortemos y peguemos el código que representa la lógica de negocio que tenemos en la vista [./views/CreateOrEdit.vue](composition-api/migrate-createoredit-view.html).
+
+📃`./composables/useCreateOrEdit.ts`
+```ts{6,12,13,18,30,39,50}
 import { computed, ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import * as Services from '../services/'
@@ -65,9 +70,18 @@ export default (props: { readonly id?: string; }) => {
   }
 }
 ```
+
+>Tenga en cuenta que esta lógica de negocio específicamente necesita las `props` para funcionar correctamente.
+
+
 ## Limpiando el archivo `./views/CreateOrEdit.vue`
 
-```ts
+Solo nos queda importar el composable `useCreateOrEdit` e instanciarlo para poder implementar las propiedades y funciones de retorno.
+
+Tenga en cuenta que las [`props` deben ser pasadas como primer argumento a la función `setup()`](https://vuejs.org/api/composition-api-setup.html#accessing-props), ya que las necesitamos para pasarlas al composable `useCreateOrEdit`.
+
+📃`./views/CreateOrEdit.vue`
+```ts{4,7,8,9,13,20}
 <script lang="ts">
 import { defineComponent } from 'vue'
 import FormTask from '../components/FormTask.vue'
@@ -110,5 +124,4 @@ export default defineComponent({
   </div>
 </template>
 ```
-
-
+De esta forma todo queda mucho más limpio, reutilizable y testeable.

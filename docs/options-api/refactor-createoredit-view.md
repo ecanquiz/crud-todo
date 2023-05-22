@@ -4,6 +4,7 @@
 
 En el siguiente código resaltado notará los cambios que hicimos para mejorar nuestro código.
 
+📃`./views/CreateOrEdit.vue`
 ```vue{3,5,16,17,32,33,40,42,43,45,47,51,53,55,59,68,69,70,71}
 <script lang="ts">
 import { defineComponent } from 'vue'

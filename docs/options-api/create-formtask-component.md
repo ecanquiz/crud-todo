@@ -4,7 +4,7 @@
 
 Cópiemos y peguemos el siguiente código en el componente `FormTask.vue`
 
-`./components/FormTask.vue`
+📃`./components/FormTask.vue`
 ```vue
 <script lang="ts">
 import { defineComponent } from 'vue'

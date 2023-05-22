@@ -40,6 +40,7 @@ Para declarar los correspondientes métodos lo haremos como normalmente lo hacem
 
 Por último, siempre se deberá retornar las propiedades y métodos que deberán ser expuestos en el `template`.
 
+📃`./views/Index.vue`
 ```vue{2,8,9,10,11,12,14,20,22,24,36,40,43,44,45}
 <script lang="ts">
 import { defineComponent, ref, onMounted } from 'vue'

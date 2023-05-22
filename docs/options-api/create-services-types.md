@@ -7,7 +7,7 @@ Habrá notado que hemos instanciado [Axios](https://axios-http.com/) en los comp
 
 Creemos la carpeta `./services/` y dentro el archivo `index.ts`
 
-`./services/index.ts`
+📃`./services/index.ts`
 ```ts{4}
 import axios from 'axios'
 
@@ -42,6 +42,7 @@ Tenga en cuenta que primero creamos una instancia de Axios estableciendo la `bas
 
 Ha llegado el momento de definir el tipado del objeto `Task`. Con ello gozaremos de los beneficios de TypeScript, como es la verificación de tipos en tiempo de desarrollo y la auto-documentación del aplicativo.
 
+📃`./types/index.ts`
 ```ts
 export type Task = {
   id: number;

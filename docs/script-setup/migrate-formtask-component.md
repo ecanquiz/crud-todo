@@ -1,6 +1,14 @@
 # Migrar Componente `FormTask.vue`
 
-```vue
+
+
+Tenga en cuenta lo siguiente:
+
+- Aquí las [`props`](https://vuejs.org/guide/typescript/composition-api.html#typing-component-props) se definen más TypeScript puro.
+- Igualmente sucede con los [`emits`](https://vuejs.org/guide/typescript/composition-api.html#typing-component-emits).
+
+📃`./components/FormTask.vue`
+```vue{5,6,7,9,10,11,17}
 <script setup lang="ts">
 import useFormTask from '../composables/useFormTask'
 import type { Task } from '@/types'
@@ -44,3 +52,8 @@ const {
 </template>
 ```
 
+>Maravillosamente increíble, cierto ??
+
+## Espero que hayas disfrutado este tutorial
+
+>**Por favor, compartelo y gracias !!**

@@ -10,7 +10,7 @@ Inmediatamente aparecerá un error en la pantalla como el siguiente:
 
 No se preocupe. Vayamos al archivo `./App.vue` y comentemos las siguientes líneas resaltadas.
 
-`./App.vue`
+📃`./App.vue`
 ```vue{3,11,13,14,15,16}
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
@@ -37,8 +37,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
 Todavía falta comentar algo en otro archivo. Se trata de la vista `HomeView.vue`.
 
-`./views/HomeView.vue`
-
+📃`./views/HomeView.vue`
 ```vue{2,7}
 <script setup lang="ts">
 //import TheWelcome from '../components/TheWelcome.vue'

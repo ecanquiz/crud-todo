@@ -6,7 +6,7 @@
 
 Vayamos al archivo de rutas y remplacemos el código con lo siguiente.
 
-`./router/index.ts`
+📃`./router/index.ts`
 ```ts
 import { createRouter, createWebHistory } from 'vue-router'
 import Index from '../views/Index.vue'
@@ -49,7 +49,7 @@ Este error es porque aún no hemos creado los componentes `Index.vue` y `CreateO
 
 Para que deje de aparecer el error debemos crear los componentes (brevemente vacios) `Index.vue` y `CreateOrEdit.vue` en la carpeta `.\views` los cuales representarán las vistas respectivamente.
 
-`./views/Index.vue`
+📃`./views/Index.vue`
 ```vue
 <script lang="ts">
 </script>
@@ -57,7 +57,8 @@ Para que deje de aparecer el error debemos crear los componentes (brevemente vac
 <template>
 </template>
 ```
-`./views/CreateOrEdit.vue`
+
+📃`./views/CreateOrEdit.vue`
 ```vue
 <script lang="ts">
 </script>

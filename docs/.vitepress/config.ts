@@ -22,7 +22,7 @@ export default defineConfig({
       collapsed: false, 
       items: [
         { text: 'Introducción', link: '/comenzar/intro' },
-        { text: 'Crear Base de Datos', link: '/comenzar/create-database' }                 
+        { text: 'Base de Datos', link: '/comenzar/database' }                 
       ]
     },{
       text: 'Laravel',   // required

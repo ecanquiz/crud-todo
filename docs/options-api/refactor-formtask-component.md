@@ -1,7 +1,8 @@
 # Refactorizar Componente `FormTask.vue`
 
-En el caso del componente `FormTask.vue` no hay mucho que refactorizar pero si agregaremos el tipado `Task`.
+En el caso del componente `FormTask.vue` no hay mucho que refactorizar por ahora, pero sí agregaremos el tipado `Task`.
 
+📃`./components/FormTask.vue`
 ```vue{3,11}
 <script lang="ts">
 import { defineComponent } from 'vue'
@@ -49,4 +50,4 @@ export default defineComponent({
 </template>
 ```
 
->Ha sido todo por la sección de la Options API en este tutorial. Ahora pasemos a conocer los beneficios de la Composition API de Vue.
+>Ha sido todo por la sección de la Options API en este tutorial. Ahora pasemos a conocer los beneficios de la Composition API y los composables de Vue...

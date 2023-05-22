@@ -23,3 +23,5 @@ Avancemos para crear los correspondientes archivos de migraci√≥n, sembradora, f√
 ```sh
 php artisan make:model Task -mcrsf
 ``` 
+
+Ya tenemos el andamiaje necesario para empezar a construir nuestra API (backend)...

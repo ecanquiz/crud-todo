@@ -12,6 +12,7 @@ La diferencia de la [`./views/Index.vue`](../composition-api/migrate-index-view.
 
 Note que aquí también necesitamos importar el método [`computed`](https://vuejs.org/guide/essentials/computed.html) de nuestro framework Vue, así como lo hicimos previamente en [la sección anterior](../composition-api/migrate-index-view.html) con [`onMounted`](https://vuejs.org/api/composition-api-lifecycle.html#onmounted).
 
+📃`./views/CreateOrEdit.vue`
 ```vue{2,3,9,10,11,12,13,14,15,16,20,21,22,23}
 <script lang="ts">
 import { computed, defineComponent, ref, onMounted } from 'vue'

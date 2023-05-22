@@ -4,7 +4,7 @@
 
 Complete el modelo `Task` con el código aquí resaltado.
 
-📃`app/Models/Task.php`
+📃`./app/Models/Task.php`
 ```php{7,12,14,15,16,17,18}
 <?php
 
@@ -31,7 +31,7 @@ class Task extends Model
 
 Complete su controlador de tareas con el código aquí resaltado.
 
-📃`app/Http/Controllers/TaskController.php`
+📃`./app/Http/Controllers/TaskController.php`
 ```php{14,16,17,23,25,26,27,28,30,31,32,33,34,35,37,38,39,40,46,48,54,56,57,58,59,60,62,68,70,71,73}
 <?php
 
@@ -113,8 +113,10 @@ class TaskController extends Controller
 
 ## Rutas
 
-routes/api
-```php
+Estas rutas que declararemos a continuación son suficientes para que la API (backend) brinde los recurso necesarios para el CRUD **ToDo**.
+
+📃`./routes/api.php`
+```php{5,22,23,24,25,26,27,28}
 <?php
 
 use Illuminate\Http\Request;
@@ -144,3 +146,9 @@ Route::prefix('tasks')->group(function () {
     Route::delete('/{task}', [TaskController::class,'destroy']);
 });
 ```
+
+Asegurémonos de declarar el uso del controlador de Tareas al inicio del correspondiente archivo.
+
+---
+
+>Llegado a este punto, la API (backend) de Laravel está literalmente lista para hacerle peticiones. Incluso, podemos probarla con alguna herramienta como [Postman](https://www.postman.com/).

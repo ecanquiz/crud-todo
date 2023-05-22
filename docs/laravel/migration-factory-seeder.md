@@ -4,7 +4,7 @@
 
 Empezaremos creando la estructura de la tabla `tasks`. Ubique el archivo que generamos, al final del paso anterior y complételo con el código resaltado. 
 
-📃`database/migrations/###_##_##_######_create_tasks_table.php`
+📃`./database/migrations/###_##_##_######_create_tasks_table.php`
 ```php{16,17,18,19}
 <?php
 
@@ -43,7 +43,7 @@ return new class extends Migration
 
 Aprovechemos las fábricas de Laravel para rellenar la sembradora. Complételo con el código resaltado. 
 
-📃`database/factories/TaskFactory.php`
+📃`./database/factories/TaskFactory.php`
 ```php{20,21,22}
 <?php
 
@@ -76,7 +76,7 @@ class TaskFactory extends Factory
 
 Notifiquemos que queremos sembrar las tareas. Agregue el código resaltado.
 
-📃`database/seeders/DatabaseSeeder.php`
+📃`./database/seeders/DatabaseSeeder.php`
 ```php{22,23,24}
 <?php
 
@@ -108,7 +108,7 @@ class DatabaseSeeder extends Seeder
 
 Ahora actualizaremos nuestro archivo sembrador para que cree 3 registros.
 
-📃`database/seeders/TaskSeeder.php`
+📃`./database/seeders/TaskSeeder.php`
 ```php{15}
 <?php
 
@@ -136,3 +136,5 @@ Ha llegado el momento de ejecutar las migraciones por la terminal.
 ```sh
 php artisan migrate:fresh --seed
 ```
+
+Ya creamos una tabla llamada `tasks` con algunos registro de prueba.

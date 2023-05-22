@@ -4,6 +4,7 @@
 
 Para el componente `FormTask.vue`, tenga en cuenta que, además de recibir el objeto `props`, también emite un evento. Dicho [evento `emit` deberá ser pasado al gancho `setup()` a través del contexto](https://vuejs.org/api/composition-api-setup.html#setup-context).
 
+📃`./components/FormTask.vue`
 ```vue{9,10,12}
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
