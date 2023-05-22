@@ -1,1 +1,0 @@
-import{_ as s,c as a,o as n,O as e}from"./chunks/framework.13642e85.js";const d=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"laravel/try-with-the-postman.md"}'),l={name:"laravel/try-with-the-postman.md"},p=e("",14),t=[p];function o(c,r,i,u,y,C){return n(),a("div",null,t)}const g=s(l,[["render",o]]);export{d as __pageData,g as default};

@@ -1,1 +1,0 @@
-import{_ as e,c as a,o as s,O as o}from"./chunks/framework.13642e85.js";const v=JSON.parse('{"title":"Nuevo Proyecto Laravel","description":"","frontmatter":{},"headers":[],"relativePath":"laravel/new-project.md"}'),n={name:"laravel/new-project.md"},l=o("",9),t=[l];function p(c,r,i,d,C,y){return s(),a("div",null,t)}const h=e(n,[["render",p]]);export{v as __pageData,h as default};
