@@ -83,6 +83,8 @@ export default defineConfig({
         { text: 'Migrar Vista CreateOrEdit', link: '/script-setup/migrate-createoredit-view' },
         { text: 'Migrar Componente FormTask', link: '/script-setup/migrate-formtask-component' },        
       ]
+    }, {
+      text: 'Cursos Relacionados', link: '/related-courses'
     }],    
     socialLinks: [
       { icon: 'github', link: 'https://github.com/ecanquiz/crud-todo' }
