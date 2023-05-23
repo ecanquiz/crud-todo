@@ -1,0 +1,1 @@
+import{_ as e,c as o,o as a,O as r}from"./chunks/framework.13642e85.js";const _=JSON.parse('{"title":"Cursos Relacionados","description":"","frontmatter":{},"headers":[],"relativePath":"related-courses.md"}'),t={name:"related-courses.md"},s=r("",8),n=[s];function c(i,l,d,u,p,h){return a(),o("div",null,n)}const b=e(t,[["render",c]]);export{_ as __pageData,b as default};
