@@ -84,7 +84,7 @@ export default defineConfig({
         { text: 'Migrar Componente FormTask', link: '/script-setup/migrate-formtask-component' },        
       ]
     }, {
-      text: 'Cursos Relacionados', link: '/related-courses'
+      text: 'Temas Relacionados', link: '/related-topics'
     }],    
     socialLinks: [
       { icon: 'github', link: 'https://github.com/ecanquiz/crud-todo' }
