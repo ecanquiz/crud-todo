@@ -52,7 +52,7 @@ export default defineComponent({
             this.$router.push({name: 'index'})            
           ))
           .catch(error => console.log(error))
-          //.finally(() => this.pending = false)*/
+          //.finally(() => this.pending = false)
       } else {
         axios
           .put(`http://localhost:8000/api/tasks/${this.$props.id}`, payload)
@@ -60,7 +60,7 @@ export default defineComponent({
             this.$router.push({name: 'index'})            
           ))
           .catch(error => console.log(error))
-          //.finally(() => this.pending = false)*/
+          //.finally(() => this.pending = false)
       }
     }  
   }
@@ -77,7 +77,7 @@ export default defineComponent({
 </template>
 ```
 
-Tenga en cuenta que la página `CreateOrEdit.vue` permite crear nuevas tareas y edita tareas existentes, a su vez permite modificarlas. Para tal fin, recuerde que cuando [creamos las rutas](../vue/create-routes.html) establecimos el parametro `id` de la ruta `edit/` como una propiedad. Observe las líneas resaltadas del código anterior para que tenga idea de cómo hacer que esto resulte.
+>Tenga en cuenta que la página `CreateOrEdit.vue` permite crear nuevas tareas y editar tareas existentes, a su vez permite modificarlas. Para tal fin, recuerde que cuando [creamos las rutas](../vue/create-routes.html) establecimos el parametro `id` de la ruta `edit/` como una propiedad. Observe las líneas resaltadas del código anterior para que tenga idea de cómo hacer que esto resulte.
 
 ## Componente (temporal)
 
@@ -88,9 +88,9 @@ Ahora, si intentamos crear una nueva tarea o editar algunona ya existente el nav
 Y es que esta vista tiene un componente hijo que no hemos creado aún.
 
 
-Para que deje de aparecer en pantalla el error anterior debemos crear el componente (brevemente vacio) `FormTask.vue` en la carpeta `./componentes/`.
+Para que deje de aparecer en pantalla el error anterior debemos crear el componente (brevemente vacio) `FormTask.vue` en la carpeta `./components/`.
 
-📃`./componentes/FormTask.vue`
+📃`./components/FormTask.vue`
 ```vue
 <script lang="ts">
 </script>

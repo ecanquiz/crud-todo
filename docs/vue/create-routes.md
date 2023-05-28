@@ -1,10 +1,10 @@
 # Crear Rutas
 
->Epecemos por crear las correspondientes rutas para acayar el error de la sección anterior.
+>Epecemos por crear las correspondientes rutas para acallar el error de la sección anterior.
 
 ## Rutas
 
-Vayamos al archivo de rutas y remplacemos el código con lo siguiente.
+Vayamos al archivo de rutas y remplacemos completamente el código con lo siguiente.
 
 📃`./router/index.ts`
 ```ts
@@ -13,25 +13,20 @@ import Index from '../views/Index.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    {
+  routes: [{
       path: '/',
       name: 'index',
       component: Index
-    },
-    {
+    }, {
       path: '/create',
       name: 'create',
-      component: () => import('../views/CreateOrEdit.vue'),
-      props: true
-    },
-    {
+      component: () => import('../views/CreateOrEdit.vue')
+    }, {
       path: '/edit/:id(\\d+)',      
       name: 'edit',
       component: () => import('../views/CreateOrEdit.vue'),
       props: true
-    }
-  ]
+  }]
 })
 
 export default router
@@ -43,11 +38,11 @@ Ahora nos aparecerá otro error, no se preocupe.
  
 ![vue-create-routes](./img/vue-create-routes-1.jpg)
 
-Este error es porque aún no hemos creado los componentes `Index.vue` y `CreateOrEdit.vue` los cuales representarán nuestras vistas.
+Este error es porque aún no hemos creado los correspondientes componentes `Index.vue` y `CreateOrEdit.vue`, los cuales representarán nuestras vistas.
 
 ## Vistas (temporales)
 
-Para que deje de aparecer el error debemos crear los componentes (brevemente vacios) `Index.vue` y `CreateOrEdit.vue` en la carpeta `.\views` los cuales representarán las vistas respectivamente.
+Para que deje de aparecer el anterior error debemos crear los componentes (brevemente vacios) `Index.vue` y `CreateOrEdit.vue` en la carpeta `.\views`, los cuales representarán las vistas respectivamente.
 
 📃`./views/Index.vue`
 ```vue

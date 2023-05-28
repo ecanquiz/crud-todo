@@ -50,7 +50,7 @@ Todavía falta comentar algo en otro archivo. Se trata de la vista `HomeView.vue
 </template>
 ```
 
-No dude en eliminar esas líneas que acabamos de comentar, no serán necesarias.
+>No dude en eliminar esas líneas que acabamos de comentar, no serán necesarias.
 
 Desocupemos tambíen el contenido de la carpeta `./views`. Es decir, eliminemos los archivos `AboutView.vue` y `HomeView.vue` dejando la carpeta completamente vacía. 
 
@@ -60,6 +60,6 @@ Aparecerá otro error...
 
 ![vue-cleaning-the-project](./img/vue-cleaning-the-project-4.jpg)
 
-Pero este error lo trataremos en la siguiente sección.
+>Pero este error lo trataremos en la siguiente sección.
 
->Por ahora, es todo lo que tenemos por limpiar.
+Por ahora, es todo lo que tenemos por limpiar.

@@ -59,7 +59,7 @@ Y también Edita Tareas.
 
 ![vue-create-formtask-component](./img/vue-create-formtask-component-2.jpg)
 
->Sin embargo, reconocemos que aún hay cosas en nuestro código que _"huelen un poco mal"_. Por lo que ahora vamos a limpiar y refactorizar nuestro código.
+>Sin embargo, aún hay algunas cosas que **_"huelen un poco mal"_**. Por lo que ahora vamos a limpiar y refactorizar nuestro código.
 
 Avancemos con la creación de Servicios y la definición de Tipos...
 
