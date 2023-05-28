@@ -1,0 +1,1 @@
+import{_ as s,c as e,o as a,O as n}from"./chunks/framework.13642e85.js";const u=JSON.parse('{"title":"Sobre TypeScript","description":"","frontmatter":{},"headers":[],"relativePath":"vue/about-typescript.md"}'),o={name:"vue/about-typescript.md"},t=n("",18),l=[t];function p(r,c,i,d,y,D){return a(),e("div",null,l)}const h=s(o,[["render",p]]);export{u as __pageData,h as default};
