@@ -44,7 +44,8 @@ export default defineConfig({
       items: [
         { text: 'Nuevo Proyecto Vue', link: '/vue/new-project' },
         { text: 'Limpiar el Proyecto', link: '/vue/cleaning-the-project' },        
-        { text: 'Crear Rutas', link: '/vue/create-routes' },       
+        { text: 'Crear Rutas', link: '/vue/create-routes' },
+        { text: 'Sobre TypeScript', link: '/vue/about-typescript' } 
       ]
     },{
       text: 'Options API',

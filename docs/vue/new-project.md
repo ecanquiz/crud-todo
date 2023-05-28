@@ -2,6 +2,15 @@
 
 ## Instalando Vue
 
+:::info Prerequisitos
+- Familiaridad con la línea de comandos
+- Instale [Node.js](https://nodejs.org) versión 18.16.0 o superior
+:::
+
+Montaremos una [Single Page Application (SPA)](https://vuejs.org/guide/extras/ways-of-using-vue.html#single-page-application-spa) de Vue en su máquina local. El proyecto creado utilizará una configuración de compilación basada en [Vite](https://vitejs.dev/) y nos permitirá usar [Vue Single-File Components (SFCs)](https://vuejs.org/guide/scaling-up/sfc.html) de Vue.
+
+Asegúrese de tener instalada una versión actualizada de [Node.js](https://nodejs.org) y de que su directorio de trabajo actual sea aquel en el que pretende crear un proyecto. Ejecute la siguiente instrucción en su línea de comandos:
+
 ```sh
 npm init vue@latest
 ```
@@ -14,7 +23,7 @@ Lo primero que nos preguntará el CLI es establecer el nombre del proyecto, sié
 
 En mi caso, colocaré el nombre del proyecto: `crud-todo-vue`. Inmediatamente el CLI nos hará una serie de preguntas que definirán las características generales del proyecto. 
 
-:::info Nota
+:::tip Nota
 Para cumplir con el objetivo de este tutorial, seleccione solo las opciones que aparecen resaltadas en el siguiente código:
 ```sh{1,2,4}
 ✔ Project name: … crud-todo-vue
@@ -28,6 +37,8 @@ Para cumplir con el objetivo de este tutorial, seleccione solo las opciones que 
 ```
 :::
 
+>No se preocupe si por ahora no conoce mucho sobre **TypeScript**, aquí será orientado al respecto, ayudándolo a irse familiarizando con su uso. Recuerde que su uso es altamente recomendado.
+
 Perfecto, ya nuestro andamiaje ha sido creado:
 
 ```sh
@@ -39,14 +50,14 @@ Done. Now run:
 
 Para finalizar la instalación de Vue, siga las instrucciones, paso por paso, ejecutando lo siguiente:
 ```sh
-cd todo-spa
+cd crud-todo-vue
 npm install
 npm run dev
 ```
 
-Con la instrucción `cd todo-spa` entramremos en la carpeta del proyecto que acabamos de crear. Luego ejecutamos `npm install` para instalar las dependencias de Vue y después levantamos nuestro proyecto con `npm run dev` en modo desarrollo. En la terminal verá lo siguiente.
+En la terminal verá lo siguiente...
 
-```sh
+```sh{3}
   VITE v4.3.5  ready in 419 ms
 
   ➜  Local:   http://localhost:5173/
@@ -54,7 +65,7 @@ Con la instrucción `cd todo-spa` entramremos en la carpeta del proyecto que aca
   ➜  press h to show help
 ```
 
-Si en su navegador coloca la ruta `http://localhost:5173/` vera su nueva SPA con Vue corriendo.
+al colocar en su navegador la ruta `http://localhost:5173/` vera su nueva SPA con Vue corriendo.
 
 ![vue-new-project](./img/vue-new-project-1.jpg)
 
@@ -162,5 +173,5 @@ Para finalizar las instalaciones de dependencias ejecute lo siguiente.
 npm i axios
 ```
 
-Con este paquete haremos las solicitudes HTTPRequest a el backend (API) para acceder a los datos (tareas).
+>Con este paquete haremos las solicitudes [HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP) al backend (API) para acceder a los datos (tareas).
 
